@@ -1,0 +1,21 @@
+library(fpp)
+base<-read.csv("C:\\Users\\SALA-C21\\Documents\\pib1.csv")
+part<-ts(base[,2], start=1993, frequency=4)
+part
+##lineal
+ajuste1<-holt(part)
+ajuste1
+##exponencial
+ajuste2<-holt(part,exponential = T)
+ajuste2
+##multiplicativo amortiguado
+ajuste3<-holt(part,exponential = T, dumbed=T )
+##aditivo amortiguado
+ajuste4<-holt(part, dumbed=T)
+plot(part, xlab="Años")
+###lines() para los 4 ajustes
+based<-read.csv("C:\\Users\\SALA-C21\\Documents\\pet.csv", header = F)
+partd<-ts(based[,2], start=1998)
+based
+plot(partd)
+##para esta hacer los mismo que con la base de datos anterior
