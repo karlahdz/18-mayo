@@ -18,4 +18,4 @@ based<-read.csv("C:\\Users\\SALA-C21\\Documents\\pet.csv", header = F)
 partd<-ts(based[,2], start=1998)
 based
 plot(partd)
-##para esta hacer los mismo que con la base de datos anterior
+##para esta hacer los mismo que con la base de datos anterior, revisar el github del 11 de mayo
